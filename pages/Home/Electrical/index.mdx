@@ -1,0 +1,181 @@
+import Head from 'next/head';
+import { Callout } from 'nextra/components';
+import { GenericHero, GenericStats, GenericGrid } from '../../../Components/index';
+
+<Head>
+    <title>Electrical Subgroup - FEDS Handbook</title>
+    <meta property="og:title" content="Electrical Subgroup - FEDS Handbook" key="title" />
+    <meta name="description" content="Comprehensive operational manual for FEDS 201 Electrical Subgroup" />
+</Head>
+
+<GenericHero 
+  title="Electrical Subgroup"
+  backgroundType='pattern'
+  height="sm"
+  subtitle="Powering Innovation and Engineering the Brains of the Robot"
+  variant="gradient"
+  size="large"
+  textAlign='center'
+/>
+
+<div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+
+# FEDS 201 Electrical Subgroup - Operational Manual
+
+## Executive Summary
+
+The FEDS 201 Electrical Subgroup operates as the central nervous system architect for our competitive robotics platform. Our responsibilities span from initial electrical design through competition-day troubleshooting, ensuring robust, safe, and reliable robot operation under demanding field conditions.
+
+This operational manual serves as the comprehensive reference for all electrical systems, procedures, and standards employed by our team, incorporating lessons learned from the 2025 REEFSCAPES season and establishing protocols for future competitive cycles.
+
+<br />
+<strong>Mission Statement</strong> 
+
+<p>To design, implement, and maintain electrical systems that provide reliable power distribution, precise motor control, accurate sensor feedback, and robust communication networks that enable our robot to perform at peak efficiency while adhering to all FRC safety and competition standards.</p>
+
+## Strategic Operational Framework
+
+Our electrical operations are structured around four core domains, each requiring specialized knowledge and systematic approach to ensure seamless integration and optimal performance.
+
+---
+### Operational Scope & Metrics
+
+The complexity and precision of the Electrical Subgroup can be understood through the key metrics of our systems. These numbers represent the fundamental principles and components that define our work, from the standard voltage we manage to our unwavering commitment to safety and documentation.
+
+Each metric highlights a core aspect of our engineering discipline, which is foundational to the success of the entire robot.
+
+<GenericStats
+  layout="grid"
+  variant="cards"
+  countUp={true}
+  animation={{ enabled: true, duration: 2000, delay: 100 }}
+ stats={[
+  {
+    value: 4,
+    label: 'Core Domains',
+    icon: '🎯',
+    description: 'Our work is structured around four key areas: Power Distribution, Control Systems, Sensor Integration, and Pneumatics.'
+  },
+  {
+    value: 12,
+    label: 'Standard Voltage',
+    icon: '⚡',
+    suffix: 'V',
+    description: 'All primary systems are designed to operate from a 12V DC power source, the standard for FRC competitions.'
+  },
+  {
+    value: 3,
+    label: 'Control System Pillars',
+    icon: '🏛️',
+    description: 'The core of our control system relies on three pillars: the RoboRIO, the Power Distribution Hub, and the Radio.'
+  },
+  {
+    value: 100,
+    label: 'Focus on Safety',
+    icon: '🛡️',
+    suffix: '%',
+    description: 'Every connection, wire, and component is installed and inspected with an absolute commitment to safety standards.'
+  },
+  {
+    value: 50,
+    label: 'Unique Components',
+    icon: '⚙️',
+    suffix: '+',
+    description: 'Our systems integrate over 50 unique components, including various motors, controllers, sensors, and regulators.'
+  },
+  {
+    value: 1,
+    label: 'Documentation Priority',
+    icon: '📚',
+    description: 'A complete and accurate wiring schematic is our top priority, ensuring reliability and ease of maintenance.'
+  }
+]}
+/>
+
+## 📚 Manual Sections
+
+Navigate through our comprehensive electrical documentation organized by functional area:
+
+<GenericGrid 
+  layout="masonry"
+  variant="cards"
+  items={[
+    {
+      title: "System Architecture",
+      description: "Complete breakdown of power distribution, CAN networks, and component integration for the 2025 REEFSCAPES robot.",
+      icon: "🏗️",
+      color: "blue",
+      link: "/Home/Electrical/SystemArchitecture",
+      buttonText: "View Architecture"
+    },
+    {
+      title: "Operating Procedures",
+      description: "Step-by-step procedures for pre-competition inspection, pit protocols, and systematic troubleshooting.",
+      icon: "📋",
+      color: "green",
+      link: "/Home/Electrical/Procedures",
+      buttonText: "View Procedures"
+    },
+    {
+      title: "Standards & Specifications",
+      description: "Connector standards, wire specifications, documentation requirements, and FRC compliance guidelines.",
+      icon: "📏",
+      color: "purple",
+      link: "/Home/Electrical/Standards",
+      buttonText: "View Standards"
+    },
+    {
+      title: "Troubleshooting Guide",
+      description: "Rapid diagnosis flowcharts, common problem solutions, and systematic repair procedures.",
+      icon: "🔧",
+      color: "orange",
+      link: "/Home/Electrical/Troubleshooting",
+      buttonText: "View Troubleshooting"
+    },
+    {
+      title: "Competition Resources",
+      description: "Toolbox organization, spare parts inventory, pit setup procedures, and competition-day checklists.",
+      icon: "🏆",
+      color: "gold",
+      link: "/Home/Electrical/Competition",
+      buttonText: "View Resources"
+    }
+  ]}
+/>
+
+## 🚀 Quick Start Guide
+
+### For New Team Members
+1. **Start with [System Architecture](/Home/Electrical/SystemArchitecture)** - Understand how our robot's electrical systems work
+2. **Review [Standards & Specifications](/Home/Electrical/Standards)** - Learn our connector and wiring standards
+3. **Practice with [Operating Procedures](/Home/Electrical/Procedures)** - Master our inspection and testing protocols
+4. **Study [Troubleshooting Guide](/Home/Electrical/Troubleshooting)** - Prepare for common issues and solutions
+
+### For Competition Day
+1. **[Competition Resources](/Home/Electrical/Competition)** - Complete toolbox and spare parts checklist
+2. **[Operating Procedures](/Home/Electrical/Procedures)** - Pre-match inspection protocols
+3. **[Troubleshooting Guide](/Home/Electrical/Troubleshooting)** - Quick reference for pit repairs
+
+### For System Design
+1. **[System Architecture](/Home/Electrical/SystemArchitecture)** - Current robot implementation details
+2. **[Standards & Specifications](/Home/Electrical/Standards)** - Design requirements and constraints
+3. **[Operating Procedures](/Home/Electrical/Procedures)** - Testing and validation procedures
+
+## 🔄 Continuous Improvement
+
+This operational manual represents our current best practices and lessons learned. We encourage all team members to:
+
+- **Document new solutions** discovered during troubleshooting
+- **Suggest improvements** to existing procedures
+- **Share knowledge** gained from competition experience
+- **Update specifications** as we adopt new components or techniques
+
+<Callout type="info" emoji="💡">
+    Each section of this manual is designed to be both educational for new members and a quick reference for experienced team members during competition.
+</Callout>
+
+</div>
+
+<Callout type="info" emoji="⚡">
+    This operational manual is a living document. All team members are encouraged to contribute improvements and updates based on field experience and evolving best practices.
+</Callout>

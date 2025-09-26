@@ -1,29 +1,548 @@
+import Head from 'next/head';
+import { Callout, Cards, Card, Tabs, Tab } from 'nextra/components';
+import { GenericHero, GenericStats, ModernCard, GenericGrid } from '../../../Components/index';
+import { 
+    FaBolt, FaSitemap, FaBook, FaMicrochip, FaWrench, FaBug, FaToolbox, 
+    FaCarBattery, FaGears, FaEye, FaNetworkWired, FaCircleNodes, FaWind
+} from 'react-icons/fa6';
+
+<Head>
+    <title>Electrical Subgroup - FEDS Handbook</title>
+    <meta property="og:title" content="Electrical Subgroup - FEDS Handbook" key="title" />
+    <meta name="description" content="Comprehensive operational manual for FEDS 201 Electrical Subgroup" />
+</Head>
+
+
+
+<GenericHero 
+  title="Electrical Subgroup"
+  backgroundType='pattern'
+  height="sm"
+  subtitle="Powering Innovation and Engineering the Brains of the Robot"
+  variant="gradient"
+  size="large"
+  textAlign='center'
+/>
+
+<div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+
+# FEDS 201 Electrical Subgroup - Operational Manual
+
+## Executive Summary
+
+The FEDS 201 Electrical Subgroup operates as the central nervous system architect for our competitive robotics platform. Our responsibilities span from initial electrical design through competition-day troubleshooting, ensuring robust, safe, and reliable robot operation under demanding field conditions.
+
+This operational manual serves as the comprehensive reference for all electrical systems, procedures, and standards employed by our team, incorporating lessons learned from the 2025 REEFSCAPES season and establishing protocols for future competitive cycles.
+
+<br />
+<strong>Mission Statement</strong> 
+
+<p>To design, implement, and maintain electrical systems that provide reliable power distribution, precise motor control, accurate sensor feedback, and robust communication networks that enable our robot to perform at peak efficiency while adhering to all FRC safety and competition standards.</p>
+
+## Strategic Operational Framework
+
+Our electrical operations are structured around four core domains, each requiring specialized knowledge and systematic approach to ensure seamless integration and optimal performance.
+
+<br />
+
 ---
-title : Template
----
+### Operational Scope & Metrics
 
-import { Cards, Card } from 'nextra/components'
+The complexity and precision of the Electrical Subgroup can be understood through the key metrics of our systems. These numbers represent the fundamental principles and components that define our work, from the standard voltage we manage to our unwavering commitment to safety and documentation.
 
-# General Rules:
-1. **Be Consistent**: Use the same style and formatting throughout the guide.
-2. **Be Concise**: Keep your writing clear and to the point.
-3. **Be Informative**: Provide useful information that helps the reader.
+Each metric highlights a core aspect of our engineering discipline, which is foundational to the success of the entire robot.
 
-# Page Structure:
-1. **Title**: The title should be descriptive and concise.
-2. **Import Statements**: Import any components or icons you need for the page.
-3. **Introduction**: Provide an overview of the topic and what the reader can expect to learn.
-4. **Content**: Organize the content into sections with headings and subheadings.
-5. **Links**: Include links to relevant resources or external websites.
+<GenericStats
+  layout="grid"
+  variant="cards"
+  countUp={true}
+  animation={{ enabled: true, duration: 2000, delay: 100 }}
+ stats={[
+  {
+    value: 4,
+    label: 'Core Domains',
+    icon: '🎯',
+    description: 'Our work is structured around four key areas: Power Distribution, Control Systems, Sensor Integration, and Pneumatics.'
+  },
+  {
+    value: 12,
+    label: 'Standard Voltage',
+    icon: '⚡',
+    suffix: 'V',
+    description: 'All primary systems are designed to operate from a 12V DC power source, the standard for FRC competitions.'
+  },
+  {
+    value: 3,
+    label: 'Control System Pillars',
+    icon: '🏛️',
+    description: 'The core of our control system relies on three pillars: the RoboRIO, the Power Distribution Hub, and the Radio.'
+  },
+  {
+    value: 100,
+    label: 'Focus on Safety',
+    icon: '🛡️',
+    suffix: '%',
+    description: 'Every connection, wire, and component is installed and inspected with an absolute commitment to safety standards.'
+  },
+  {
+    value: 50,
+    label: 'Unique Components',
+    icon: '⚙️',
+    suffix: '+',
+    description: 'Our systems integrate over 50 unique components, including various motors, controllers, sensors, and regulators.'
+  },
+  {
+    value: 1,
+    label: 'Documentation Priority',
+    icon: '📚',
+    description: 'A complete and accurate wiring schematic is our top priority, ensuring reliability and ease of maintenance.'
+  }
+]}
+/>
 
-# Programming Rules:
-1. No-spaces in file names.
-2. Add your file name to the _meta.json file.
-```js
-export default {
-  foo: '',
-  1992_10_21: '',
-  1: ''
-}
-```
-3. Use the same style and formatting throughout the guide.
+## 🛠️ Tools and Resources
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
+  gap: 'clamp(16px, 4vw, 32px)',
+  margin: 'clamp(30px, 8vw, 60px) 0',
+  padding: '0 clamp(16px, 4vw, 0px)'
+}}>
+  <ModernCard
+    icon={<FaSitemap />}
+    bgPattern="waves"
+    title="Wiring Standards & Best Practices"
+    description="Official guidelines for wire gauge, color-coding, and routing to ensure a clean and reliable system."
+    href="/Home/Electrical/ToolsAndResources/WiringStandards"
+    gradient="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaBook />}
+    bgPattern="waves"
+    title="Component Datasheets"
+    description="A centralized library of technical specifications for all motors, sensors, and controllers used on the robot."
+    href="/Home/Electrical/ToolsAndResources/Datasheets"
+    gradient="linear-gradient(135deg, #64748b 0%, #475569 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaMicrochip />}
+    bgPattern="waves"
+    title="Control System Architecture"
+    description="An overview of the entire control system, detailing how each component communicates and functions."
+    href="/Home/Electrical/ToolsAndResources/ControlSystem"
+    gradient="linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaWrench />}
+    bgPattern="waves"
+    title="Soldering and Crimping Guide"
+    description="Best practices and step-by-step instructions for creating secure and reliable electrical connections."
+    href="/Home/Electrical/ToolsAndResources/SolderingGuide"
+    gradient="linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaBug />}
+    bgPattern="waves"
+    title="Troubleshooting Procedures"
+    description="A systematic guide to diagnosing and resolving common electrical issues quickly and effectively."
+    href="/Home/Electrical/ToolsAndResources/Troubleshooting"
+    gradient="linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaToolbox />}
+    bgPattern="waves"
+    title="Inventory Management"
+    description="Procedures for organizing and tracking our inventory of wires, connectors, and electronic components."
+    href="/Home/Electrical/ToolsAndResources/Inventory"
+    gradient="linear-gradient(135deg, #22c55e 0%, #16a34a 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+</div>
+
+## 🔌 Key Systems & Schematics
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))',
+  gap: 'clamp(16px, 4vw, 32px)',
+  margin: 'clamp(30px, 8vw, 60px) 0',
+  padding: '0 clamp(16px, 4vw, 0px)'
+}}>
+  <ModernCard
+    icon={<FaCarBattery />}
+    bgPattern="waves"
+    title="Power Distribution System"
+    description="Schematics and layout for the Power Distribution Hub (PDH), breakers, and main power path."
+    href="/Home/Electrical/Systems/PowerDistribution"
+    gradient="linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaGears />}
+    bgPattern="waves"
+    title="Motor Control"
+    description="Wiring diagrams for both brushed (e.g., Sparks) and brushless (e.g., Spark MAX/Flex) motor controllers."
+    href="/Home/Electrical/Systems/MotorControl"
+    gradient="linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+    <ModernCard
+    icon={<FaEye />}
+    bgPattern="waves"
+    title="Sensor Integration"
+    description="Documentation for integrating encoders, limit switches, beam breaks, and other critical sensors."
+    href="/Home/Electrical/Systems/Sensors"
+    gradient="linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaWind />}
+    bgPattern="waves"
+    title="Pneumatics Control System"
+    description="Layout and wiring for the Pneumatic Hub (PH), compressor, and solenoids."
+    href="/Home/Electrical/Systems/Pneumatics"
+    gradient="linear-gradient(135deg, #14b8a6 0%, #0d9488 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaNetworkWired />}
+    bgPattern="waves"
+    title="Networking & Communications"
+    description="CAN bus topology, Ethernet connections, and radio configuration for robust on-field communication."
+    href="/Home/Electrical/Systems/Networking"
+    gradient="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+  <ModernCard
+    icon={<FaCircleNodes />}
+    bgPattern="waves"
+    title="Custom Circuitry"
+    description="Design files and schematics for any custom electronics, such as LED indicators or sensor boards."
+    href="/Home/Electrical/Systems/CustomCircuits"
+    gradient="linear-gradient(135deg, #ec4899 0%, #db2777 100%)"
+    customStyles={{backgroundColor: "rgba(123, 54, 180, 0.13)", color: 'white', boxShadow: '0 -10px 20px rgba(255, 255, 255, 0.3)' }}
+  />
+</div>
+
+## 📋 2025 REEFSCAPES System Architecture
+
+Based on our current competition robot, here's the comprehensive system breakdown:
+
+### Power Distribution Architecture
+
+<Tabs items={['PDH Layout', 'Fuse Configuration', 'Battery Management']}>
+  <Tab>
+    Our Power Distribution Hub (PDH) serves as the central power management system:
+    
+    **High Current Channels (ATO Fuses):**
+    - Channels 0-9: Swerve drive motors (Kraken X60)
+    - Channels 10-11: Elevator gearbox motors (Kraken X60) 
+    - Channels 12-13: Climb gearbox motors (Kraken X60)
+    - Channels 14-15: Carriage motors (Kraken X60)
+    
+    **Low Current Channels (ATM Fuses):**
+    - Channel 20: RoboRIO power
+    - Channel 21: Radio power  
+    - Channel 22: Vision processing (Limelight units)
+    - Channel 23: Pneumatic hub
+  </Tab>
+  <Tab>
+    **ATO Type Fuses (High Current):**
+    - 10A: Reserved/Light loads
+    - 20A: Single motor channels
+    - 30A: Heavy-duty single motors
+    - 40A: Dual motor channels or high-torque applications
+    
+    **ATM Type Fuses (Low Current):**
+    - 10A: Control electronics
+    - 15A: Vision systems
+    - 20A: Pneumatic systems
+    - 30A: High-power accessories
+    
+    <Callout type="warning">
+      Fuse ratings must be selected per FRC Game Manual specifications and motor requirements to prevent brownouts.
+    </Callout>
+  </Tab>
+  <Tab>
+    **Battery Management Protocol:**
+    - Pre-match voltage check: >12.0V required
+    - CCA rating verification: 280-300 CCA on SEAL/SAE
+    - Connection inspection: SB50/SB120 terminals
+    - Terminal cleaning and corrosion prevention
+    - Backup battery rotation system
+  </Tab>
+</Tabs>
+
+### CAN Network Topology
+
+Our CAN bus architecture ensures reliable communication between all intelligent devices:
+
+<GenericGrid 
+  layout="masonry"
+  variant="cards"
+  items={[
+    {
+      title: "CAN Bus 1 (RIO)",
+      description: "Primary control network connecting RoboRIO to essential systems",
+      icon: "🔗",
+      color: "blue",
+      details: "PDH, Pneumatic Hub, Pigeon IMU, Critical sensors"
+    },
+    {
+      title: "CAN Bus 2 (CANivore)",
+      description: "High-speed motor control network for drivetrain and mechanisms",
+      icon: "⚡",
+      color: "orange", 
+      details: "All Kraken X60 controllers, CANcoders, Through-bore encoders"
+    },
+    {
+      title: "Network Termination",
+      description: "Proper 120Ω termination at both ends of each CAN bus",
+      icon: "�",
+      color: "green",
+      details: "Prevents signal reflections and ensures reliable communication"
+    }
+  ]}
+/>
+
+## 🔧 Standard Operating Procedures
+
+### Pre-Competition Inspection Checklist
+
+<Tabs items={['Power Systems', 'Control Networks', 'Safety Verification']}>
+  <Tab>
+    **Battery and Power Distribution:**
+    1. Battery voltage measurement (>12.0V)
+    2. Battery capacity test (CCA verification)
+    3. SB connector inspection and cleaning
+    4. Main breaker operation verification
+    5. PDH LED status verification
+    6. Individual fuse/breaker testing
+    7. Voltage rail measurements (12V, 5V, 3.3V)
+  </Tab>
+  <Tab>
+    **Communication Networks:**
+    1. CAN bus continuity testing
+    2. Termination resistance verification (120Ω)
+    3. RoboRIO communication test
+    4. CANivore device enumeration
+    5. Radio connectivity verification
+    6. Ethernet cable integrity
+    7. USB connection security
+  </Tab>
+  <Tab>
+    **Safety and Compliance:**
+    1. RSL (Robot Signal Light) functionality
+    2. Emergency stop response testing
+    3. Wire routing and strain relief inspection
+    4. Connector security verification
+    5. Heat generation monitoring
+    6. Short circuit protection testing
+    7. FRC compliance verification
+  </Tab>
+</Tabs>
+
+### Competition Day Pit Procedures
+
+When the robot enters the pit area, follow this systematic approach:
+
+**Step 1: Power Isolation**
+- Disconnect main battery immediately
+- Verify all stored energy is safely discharged
+- Document any reported issues from drive team
+
+**Step 2: Issue Assessment**
+Common problems and initial diagnostics:
+- **Robot-wide power loss:** Check battery connections, main breaker, SB connectors
+- **Brownout conditions:** Verify fuse ratings, check for loose connections
+- **Component intermittent failure:** Inspect CAN connections, power connections
+- **Complete component failure:** Check fuse continuity, CAN bus integrity
+
+**Step 3: Systematic Inspection**
+- Visual inspection of all connections
+- Continuity testing of suspected circuits  
+- CAN bus diagnostic using appropriate tools
+- Mechanical stress point examination
+
+## 🔌 Connector Standards and Specifications
+
+### High Current Connections (12-14 AWG)
+
+**Anderson Powerpole Connectors:**
+- 45A crimp terminals required
+- Positive (red) on right, negative (black) on left when viewed from insertion point
+- Used for motor controller connections and power extensions
+- Proper crimping: No exposed wire beyond crimp, secure connection
+
+**Ring Terminal Applications:**
+- Direct PDH connections
+- Motor controller power inputs (Kraken X60/X44)
+- Battery terminal connections
+- Proper installation: No insulation in crimp area, secure under terminal
+
+### Low Current Connections (22-24 AWG)
+
+**Molex SL Connector System:**
+- Female connectors: CANcoder leads, component interconnects
+- Male connectors: Device leads (Pigeon, sensors)
+- Proper crimping: 2-click crimp positioning, ⅛" wire strip
+
+### Communication Connections
+
+**Ethernet (RJ45) Connections:**
+- T-568B wiring standard mandatory
+- Custom length cables minimize wire loops
+- 90-degree adapters for space-constrained installations
+- Strain relief boots required
+
+## 🛠️ Competition Toolbox Organization
+
+### Primary Tool Chest Contents
+
+**Essential Crimping Tools:**
+- Powerpole crimp tool (with backup)
+- Molex SL crimp tool
+- Ethernet crimp tool (RJ45)
+- Wire strippers (multiple gauges)
+
+**Testing Equipment:**
+- Digital multimeter
+- Ethernet cable tester
+- CAN bus diagnostic tool
+- Battery tester (Battery Bill)
+- Voltage checkers
+
+**Consumable Supplies:**
+- Spare wire (12, 14, 18, 22, 24, 26, 28 AWG)
+- Connector housings and terminals
+- Heat shrink tubing (various sizes)
+- Electrical tape
+- Zip ties and cable management
+
+**Emergency Repair Supplies:**
+- Pre-made patch cables
+- Quick-connect terminals
+- Soldering station and supplies
+- Spare fuses (ATO/ATM types)
+- Backup critical components
+
+### Spare Component Inventory
+
+**Control System Spares:**
+- RoboRIO
+- PDH (Power Distribution Hub)
+- Radio
+- CANivore
+- Ethernet switch
+
+**Sensor Spares:**
+- Pigeon IMU (2.0)
+- CANcoders (minimum 2)
+- Through-bore encoders
+- Limit switches
+
+**Power Components:**
+- Spare batteries (minimum 2)
+- Main breaker
+- Assorted fuses and breakers
+- SB connector assemblies
+
+## 📊 Troubleshooting Decision Matrix
+
+### Rapid Diagnosis Flowchart
+
+**Power Issues:**
+1. No robot power → Check battery voltage, main breaker, SB connections
+2. Partial power loss → Verify individual fuses, check PDH status LEDs
+3. Brownout conditions → Examine fuse ratings, look for high-resistance connections
+
+**Communication Failures:**
+1. CAN device non-responsive → Check termination, verify CAN H/L connections
+2. Radio disconnection → Inspect ethernet cables, verify radio power
+3. Sensor dropout → Test sensor power, verify CAN ID conflicts
+
+**Motor Control Problems:**
+1. Motor non-responsive → Check power connections, CAN communication, fuse continuity
+2. Erratic motor behavior → Inspect encoder connections, verify controller firmware
+3. Overheating → Check current draw, verify proper fuse rating, inspect ventilation
+
+## 📖 Documentation Standards
+
+### Wiring Diagram Requirements
+
+All electrical systems must be documented with:
+- Complete schematic showing all connections
+- Wire gauge and color specifications
+- Connector type and pin assignments
+- Fuse/breaker ratings and locations
+- CAN ID assignments
+- Power consumption calculations
+
+### Labeling Convention
+
+**Wire Labeling:**
+- Format: [Source]-[Destination]-[Signal Type]
+- Example: "PDH-01-MOTOR-FL" (PDH channel 1 to front-left motor)
+- Color-coded by function (Red: +12V, Black: Ground, Yellow: CAN-H, Green: CAN-L)
+
+**Component Labeling:**
+- Unique identifier for each device
+- QR codes for quick access to documentation
+- Maintenance log attachment point
+
+### Competition Documentation Package
+
+Required documents for competition:
+1. Complete robot electrical schematic
+2. Component specification sheets
+3. Troubleshooting quick reference
+4. Emergency contact information
+5. Spare parts inventory list
+
+## 💡 Best Practices and Lessons Learned
+
+### Design Principles
+
+**Reliability First:**
+- Minimize connection points
+- Use appropriate strain relief
+- Plan for thermal management
+- Implement redundancy for critical systems
+
+**Maintainability:**
+- Accessible connection points
+- Clear labeling and documentation
+- Modular design for easy replacement
+- Standardized connector types
+
+**Safety Always:**
+- Proper fuse protection
+- Secure wire routing
+- Emergency disconnect accessibility
+- Regular inspection schedules
+
+### Team Collaboration
+
+**Cross-Training:**
+- Multiple team members qualified on each system
+- Regular knowledge sharing sessions
+- Mentorship program for new members
+- Documentation of tribal knowledge
+
+**Communication Protocols:**
+- Clear escalation procedures
+- Standardized problem reporting
+- Regular status updates during competitions
+- Post-event lessons learned sessions
+
+</div>
+
+<Callout type="info" emoji="⚡">
+    This operational manual is a living document. All team members are encouraged to contribute improvements and updates based on field experience and evolving best practices.
+</Callout>
