@@ -255,90 +255,184 @@ export default {
 
   docsRepositoryBase: "https://github.com/feds201/FEDS-Handbook/tree/main",
 
-  footer: {
-    text: (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "16px",
-          padding: "24px 0",
-          borderTop: "1px solid rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "16px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "24px",
-              flexWrap: "wrap",
-            }}
-          >
-            <a
-              href="https://feds201.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                fontWeight: "600",
-                color: "#374151",
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.color = "#6366f1";
-                e.target.style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = "#374151";
-                e.target.style.transform = "translateY(0)";
-              }}
+    footer: {
+        text: (
+            <div
+                style={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "3rem",
+                    padding: "4rem 0 2rem",
+                    borderTop: "1px solid rgba(0,0,0,0.08)",
+                    fontSize: "0.9rem",
+                }}
             >
-              <img
-                src="https://i.imgur.com/pEpTlKh.png"
-                alt="FEDS201"
-                width="20"
-                height="20"
-                style={{ borderRadius: "4px" }}
-              />
-              FEDS201
-            </a>
-          </div>
-          <div
-            style={{
-              fontSize: "14px",
-              color: "#9ca3af",
-              fontWeight: "500",
-            }}
-          >
-            © {new Date().getFullYear()} All rights reserved
-          </div>
-        </div>
-        <div
-          style={{
-            fontSize: "12px",
-            color: "#9ca3af",
-            textAlign: "center",
-            fontStyle: "italic",
-          }}
-        >
-          Empowering the next generation of Falcons
-        </div>
-      </div>
-    ),
-  },
+                {/* Main Footer Grid */}
+                <div
+                    className="footer-grid"
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                        gap: "2rem",
+                    }}
+                >
+                    {/* Column 1: Brand & Mission */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                        <a
+                            href="https://feds201.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="brand-link"
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "0.75rem",
+                                textDecoration: "none",
+                                color: "inherit",
+                                width: "fit-content",
+                            }}
+                        >
+                            <img
+                                src="https://i.imgur.com/pEpTlKh.png"
+                                alt="FEDS201 Logo"
+                                width="40"
+                                height="40"
+                                style={{ borderRadius: "8px" }}
+                            />
+                            <span style={{ fontWeight: 700, fontSize: "1.2rem" }}>FEDS 201</span>
+                        </a>
+                        <p style={{ opacity: 0.7, lineHeight: "1.6" }}>
+                            Inspiring students to be STEM leaders through mentoring and innovation.
+                            Transforming culture by celebrating science and technology.
+                        </p>
+                        <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
+                            {/* Social Placeholders or Badges could go here */}
+                            <span style={{
+                                fontSize: "0.75rem",
+                                padding: "0.25rem 0.75rem",
+                                borderRadius: "99px",
+                                background: "rgba(100,100,100,0.1)",
+                                fontWeight: 600
+                            }}>
+                Est. 1998
+              </span>
+                        </div>
+                    </div>
 
+                    {/* Column 2: Discover */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                        <h4 style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.25rem" }}>Discover</h4>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", opacity: 0.8 }}>
+                            <a href="https://feds201.com/#about-us" className="footer-link">About Us</a>
+                            <a href="https://feds201.com/#feds-history" className="footer-link">FEDS' History</a>
+                            <a href="#" className="footer-link">Our Robots</a>
+                            <a href="https://feds201.com/#operations-home-page" className="footer-link">Key Operations</a>
+                            <a href="https://feds201.com/#frc-resource-library-p-c" className="footer-link">FRC Resources</a>
+                        </div>
+                    </div>
+
+                    {/* Column 3: Community */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                        <h4 style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.25rem" }}>Community</h4>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", opacity: 0.8 }}>
+                            <a href="https://feds201.com/#sponsor-relations" className="footer-link">Sponsors</a>
+                            <a href="https://venmo.com/stemunited201" className="footer-link">Donate</a>
+                            <a href="https://feds201.com/#agent-progress-tracker" className="footer-link">Agent Portal</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScaCG7IO5z2rkSXDnx14QGBRQCL5hUfY9YVSUvCFXrbXyF-rA/viewform" className="footer-link">Contact Us</a>
+                        </div>
+                    </div>
+
+                    {/* Column 4: Contact & Motto */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                        <div>
+                            <h4 style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.5rem" }}>Location</h4>
+                            <p style={{ opacity: 0.7, lineHeight: "1.6" }}>
+                                Rochester High School<br />
+                                Rochester Hills, Michigan<br />
+                                USA
+                            </p>
+                        </div>
+
+                        <div style={{
+                            padding: "1rem",
+                            borderRadius: "0.75rem",
+                            background: "linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(59, 130, 246, 0.1))",
+                            border: "1px solid rgba(20, 184, 166, 0.2)"
+                        }}>
+              <span style={{
+                  display: "block",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em",
+                  marginBottom: "0.25rem",
+                  color: "#0d9488"
+              }}>
+                Team Motto
+              </span>
+                            <span style={{ fontWeight: 600, fontStyle: "italic" }}>
+                "Once a FED, Always a FED"
+              </span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <div style={{ width: "100%", height: "1px", background: "rgba(0,0,0,0.08)" }} />
+
+                {/* Bottom Bar */}
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                        gap: "1rem",
+                        fontSize: "0.85rem",
+                    }}
+                >
+                    <div style={{ opacity: 0.6 }}>
+                        © {new Date().getFullYear()} FEDS 201. All rights reserved.
+                    </div>
+
+                    <div
+                        style={{
+                            fontWeight: "600",
+                            background: "linear-gradient(90deg, #14b8a6, #3b82f6)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                        }}
+                    >
+                        Empowering the next generation of Falcons
+                    </div>
+                </div>
+
+                {/* Styles */}
+                <style dangerouslySetInnerHTML={{__html: `
+          .footer-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+          }
+          .footer-link:hover {
+            color: #14b8a6;
+            transform: translateX(2px);
+          }
+          .brand-link:hover {
+            opacity: 0.8;
+          }
+          @media (max-width: 768px) {
+            .footer-grid {
+              grid-template-columns: 1fr;
+              gap: 2.5rem;
+            }
+          }
+        `}} />
+            </div>
+        ),
+    },
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== "/") {

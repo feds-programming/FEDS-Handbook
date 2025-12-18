@@ -40,7 +40,7 @@
     }
   },
   "ZeroToHero5": {
-    "title": "Episode 5: PID Control & Precision",
+    "title": "Episode 5: Vision & Limelight",
     "theme": {
       "breadcrumb": true,
       "footer": true,
@@ -50,27 +50,7 @@
     }
   },
   "ZeroToHero6": {
-    "title": "Episode 6: Automation & Autonomous",
-    "theme": {
-      "breadcrumb": true,
-      "footer": true,
-      "sidebar": true,
-      "toc": true,
-      "pagination": true
-    }
-  },
-  "ZeroToHero7": {
-    "title": "Episode 7: State Machines & Logic",
-    "theme": {
-      "breadcrumb": true,
-      "footer": true,
-      "sidebar": true,
-      "toc": true,
-      "pagination": true
-    }
-  },
-  "ZeroToHero8": {
-    "title": "Episode 8: Simulation & Testing",
+    "title": "Episode 6: PID Control",
     "theme": {
       "breadcrumb": true,
       "footer": true,
