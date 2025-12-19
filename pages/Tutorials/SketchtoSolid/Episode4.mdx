@@ -1,0 +1,106 @@
+import Head from 'next/head';
+import { Callout } from 'nextra/components';
+import {
+    GenericHero,
+    GenericWidget,
+    GenericGrid,
+    ModernCard
+} from '../../../Components/index';
+
+<Head>
+    <title>Sketch to Solid Episode 4: Scoring & The End Game - FEDS Handbook</title>
+    <meta property="og:title" content="Sketch to Solid Episode 4: Scoring & The End Game - FEDS Handbook" key="title" />
+</Head>
+
+<GenericHero
+    title="Sketch to Solid #4"
+    titleColor="linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%)"
+    subtitle="Scoring & The End Game 🎯"
+    description="Delivering the payload and sticking the landing. It's not enough to just hold the game piece; you have to put it where it counts. And then, you have to hang from a chain. Easy, right?"
+    backgroundType="gradient"
+    backgroundValue="linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+    particles={[
+        { symbol: '🎯', transform: 'translateX(15px) translateY(-10px)' },
+        { symbol: '🧗', transform: 'translateX(-12px) translateY(8px)' },
+        { symbol: '🏗️', transform: 'translateX(8px) translateY(-15px)' }
+    ]}
+    buttons={[
+        { text: '🎬 Watch Episode', style: 'primary', href: '#' },
+        { text: '📚 Next Episode', style: 'secondary', href: '/Tutorials/SketchtoSolid/Episode5' }
+    ]}
+    height="md"
+    textAlign="center"
+    overlay={{ enabled: true, color: 'rgba(0, 0, 0, 0.1)' }}
+/>
+
+<Callout type="info" emoji="🚀">
+    **The Finale**: It's all about the finish.
+    * **Lesson 7**: End Effectors (The Hands)
+    * **Lesson 8**: Endgame Mechanisms (The Muscles)
+</Callout>
+
+## 🎯 Learning Objectives
+<br></br><br></br>
+<GenericWidget title="What You'll Master" variant="gradient" size="lg">
+    <GenericGrid layout="responsive" columns={{ xs: 1, sm: 2 }} gap="16px" items={[
+        { title: "End Effectors", icon: "👐", description: "Shooters, Placers, and everything in between." },
+        { title: "Elevators vs. Arms", icon: "🏗️", description: "The vertical struggle. Linear motion vs. rotational motion." },
+        { title: "Climbing", icon: "🧗", description: "How to lift a 125lb robot 2 feet in the air without breaking everything." },
+        { title: "Dual Purpose", icon: "🎭", description: "Making one mechanism do two jobs (because we're lazy... efficient)." }
+    ]}
+                 renderItem={(item) => <ModernCard {...item} variant="elevated" size="sm" />}
+    />
+</GenericWidget>
+
+---
+
+## 👐 Chapter 1: End Effectors (Shooters & Placers)
+
+### Analysis of Greatness
+
+<GenericGrid layout="responsive" columns={{ xs: 1, sm: 2 }} gap="16px" items={[
+    { title: "Single Game Piece", icon: "1️⃣", description: "254 (2022): Turret + Adjustable Hood. Optimized for one thing: Shooting fast and accurate." },
+    { title: "Dual Purpose", icon: "2️⃣", description: "118 (2019): Controlling two different objects (Hatch & Cargo) with shared wheels. A masterpiece of packaging." }
+]}
+    renderItem={(item) => <ModernCard {...item} variant="outlined" size="sm" />}
+/>
+
+### Movement Methods: Getting to the Goal
+*   **Elevators**: Continuous vs. Cascade rigging. Great for going straight up. Heavy.
+*   **Arms**: Telescoping or Pivoting. Great for reaching out. Complex geometry.
+*   **The Combo**: The "Elevator w/ pivoting mech" (Reefscape style) vs. the "Pivoting Elevator" (1323 style).
+
+---
+
+## 🧗 Chapter 2: Endgame Deep Dive
+
+**Objective:** Hanging, climbing, or balancing. This is usually the last 20 seconds of the match.
+
+### Mechanisms of Ascent
+*   **Winches**: Simple, strong, slow.
+*   **Telescoping Arms**: Fast, reach high, pull up.
+*   **Pneumatics**: Bang-bang. Up and down.
+
+<Callout type="error" emoji="💀">
+    **Epic Fails**: We discuss locking mechanisms (ratchets, friction brakes) because falling down after the buzzer sounds is the saddest sound in FRC.
+</Callout>
+
+### Activity: The "Dual-Purpose" Challenge
+**Task:** Whiteboard a mechanism that can BOTH intake a game piece AND score it.
+*Examples:* 2022 Everybot intake/scorer, 2025 L1 manipulators.
+*Goal:* Efficiency. Why build two things when one thing do trick?
+
+---
+
+## 📞 Need Help?
+
+- **Email**: feds.design@gmail.com
+
+**Remember: Gravity is a law, not a suggestion. Respect it.** 🍎
+
+---
+
+<Callout type="info" emoji="💝">
+    **Pro Tip**: Always design a "hard stop" for your mechanisms. If the software fails (and it will), the hardware shouldn't break.
+</Callout>
+

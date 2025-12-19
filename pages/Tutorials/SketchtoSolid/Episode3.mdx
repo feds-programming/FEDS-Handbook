@@ -1,0 +1,109 @@
+import Head from 'next/head';
+import { Callout } from 'nextra/components';
+import {
+    GenericHero,
+    GenericWidget,
+    GenericGrid,
+    GenericTimeline,
+    ModernCard
+} from '../../../Components/index';
+
+<Head>
+    <title>Sketch to Solid Episode 3: The Art of Acquisition - FEDS Handbook</title>
+    <meta property="og:title" content="Sketch to Solid Episode 3: The Art of Acquisition - FEDS Handbook" key="title" />
+</Head>
+
+<GenericHero
+    title="Sketch to Solid #3"
+    titleColor="linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%)"
+    subtitle="The Art of Acquisition 🦾"
+    description="If you can't pick it up, you can't score. The intake is the second most important system on the robot (after the drivetrain). Let's learn how to grab things without looking like a clumsy toddler."
+    backgroundType="gradient"
+    backgroundValue="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+    particles={[
+        { symbol: '🦾', transform: 'translateX(15px) translateY(-10px)' },
+        { symbol: '🍩', transform: 'translateX(-12px) translateY(8px)' },
+        { symbol: '📦', transform: 'translateX(8px) translateY(-15px)' }
+    ]}
+    buttons={[
+        { text: '🎬 Watch Episode', style: 'primary', href: '#' },
+        { text: '📚 Next Episode', style: 'secondary', href: '/Tutorials/SketchtoSolid/Episode4' }
+    ]}
+    height="md"
+    textAlign="center"
+    overlay={{ enabled: true, color: 'rgba(0, 0, 0, 0.1)' }}
+/>
+
+<Callout type="info" emoji="🎣">
+    **The Rule of Acquisition**: Touch it, Own it.
+    * **Lesson 5**: Intakes (The Mouth)
+    * **Lesson 6**: Indexers (The Throat)
+</Callout>
+
+## 🎯 Learning Objectives
+<br></br><br></br>
+<GenericWidget title="What You'll Master" variant="gradient" size="lg">
+    <GenericGrid layout="responsive" columns={{ xs: 1, sm: 2 }} gap="16px" items={[
+        { title: "Intake Geometry", icon: "📐", description: "Over the bumper vs. Under the bumper. The eternal struggle." },
+        { title: "Material Science", icon: "🧪", description: "Rigid vs. Compliant. When to be soft and when to be hard." },
+        { title: "Roller Tech", icon: "⚙️", description: "Star wheels, vectoring, and floating rollers." },
+        { title: "Indexing", icon: "🔄", description: "How to get the game piece from the intake to the shooter without jamming." }
+    ]}
+                 renderItem={(item) => <ModernCard {...item} variant="elevated" size="sm" />}
+    />
+</GenericWidget>
+
+---
+
+## 🦾 Chapter 1: Intake Methodologies
+
+**The Goal:** Reliable acquisition. You should be able to drive past a game piece at full speed and pick it up without stopping.
+
+### Types & Geometry
+
+<GenericGrid layout="responsive" columns={{ xs: 1, sm: 2 }} gap="16px" items={[
+    { title: "Slapdown / Pivoting", icon: "👋", description: "A rigid arm that pivots out to grab the piece. Classic, effective, but vulnerable to damage." },
+    { title: "Under-the-Bumper (UTB)", icon: "🚗", description: "The intake is hidden inside the frame. Protected, fast, but requires a specific chassis cutout. (See: 118 in 2024)." }
+]}
+    renderItem={(item) => <ModernCard {...item} variant="outlined" size="sm" />}
+/>
+
+### Materials: The Soft Touch
+*   **Rigid Intakes** (Polycarb/Aluminum) are for **Compliant Game Pieces** (Foam balls, inflated cubes).
+*   **Compliant Intakes** (Rubber wheels, flex tubing) are for **Rigid Game Pieces** (Hard plastic cones).
+*   *Opposites attract!*
+
+---
+
+## 🔄 Chapter 2: Indexing & Handoffs
+
+Once you have it, where does it go? The **Indexer** is the waiting room for game pieces.
+
+### Case Studies in Flow
+
+<GenericTimeline orientation="vertical" variant="cards" items={[
+    { title: "With Indexer (254 in 2022)", description: "Used a 'serializer' to organize balls into a single file line before feeding the shooter. Order from chaos.", icon: "1️⃣", date: "Serialized" },
+    { title: "Without Indexer (118 in 2023)", description: "A pivoting intake that handed off DIRECTLY to the end effector. Fast, but requires insane precision.", icon: "⚡", date: "Direct" }
+]}
+/>
+
+### CAD Highlight: The 4-Bar Linkage
+**The Problem:** How do I deploy an intake outside the frame but pack it inside for the start of the match?
+**The Solution:** The 4-Bar Linkage.
+*   Use geometric constraints in sketches to simulate the motion.
+*   Ensure it stays within the "Frame Perimeter" when retracted.
+
+---
+
+## 📞 Need Help?
+
+- **Email**: feds.mech@gmail.com
+
+**Remember: An intake that jams is worse than no intake at all.** 🚫
+
+---
+
+<Callout type="info" emoji="💝">
+    **Pro Tip**: "Vectoring" wheels (mecanum wheels) can center a game piece automatically. It's like magic, but it's just physics.
+</Callout>
+

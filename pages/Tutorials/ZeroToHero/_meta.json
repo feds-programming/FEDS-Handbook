@@ -1,4 +1,14 @@
 {
+  "ZeroToHeroRoadmap": {
+    "title": "Roadmap: Zero to Hero",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
+  },
   "ZeroToHero1": {
     "title": "Episode 1: Introduction to WPILib",
     "theme": {
@@ -58,5 +68,26 @@
       "toc": true,
       "pagination": true
     }
+  },
+  "ZeroToHero7": {
+    "title": "Episode 7: Advanced Commands",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
+  },
+  "ZeroToHero8": {
+    "title": "Episode 8: Advanced Simulation",
+    "theme": {
+      "breadcrumb": true,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
   }
 }
+
